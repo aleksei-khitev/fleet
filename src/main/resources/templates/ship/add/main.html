@@ -1,35 +1,43 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <meta charset="utf-8" />
-<head th:include="fragments/layout :: headerFragment">
+<head>
     <title id="pageTitle">Корабли</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        body {
+            text-align: center;
+            background-color: #B0C4DE;
+            margin: 0 15%;
+            font-family: sans-serif;
+        }
+        h1 {
+            font-family: Georgia;
+            font-weight: normal;
+            text-transform: uppercase;
+            border-bottom: lpx solid #57bldc;
+            margin-top: 30px;
+        }
+        footer {text-align: left; !important}
+    </style>
 </head>
 <body>
-<h1>Корабли</h1>
-<h2>Добавление модели корабля</h2>
-<div class="main-content">
-    <hr/>
-    <form action="#" th:action="@{/ship/save/main}" method="post">
-        <label for="name">Название модели (en)</label>
-        <input type="text" name="name" id="name"><br/>
-        <label for="name">Название модели (ру)</label>
-        <input type="text" name="localized_name" id="localized_name"><br/>
-        <label for="manufacturer">Производитель</label>
-        <input type="text" name="manufacturer" id="manufacturer"><br/>
-        <label for="autonomy">Автономность (в днях)</label>
-        <input type="text" name="autonomy" id="autonomy"><br/>
-        <label for="cargo_capacity">Грузоподъемность</label>
-        <input type="text" name="cargo_capacity" id="cargo_capacity"><br/>
-        <label for="description">Описание</label>
-        <input type="text" name="description" id="description"><br/>
-        <label for="cost">Стоимость</label>
-        <input type="text" name="cost" id="cost"><br/>
-        <label for="link">Ссылка</label>
-        <input type="text" name="link" id="link"><br/>
-        <input type="submit" value="Перейти к размерам"/>
-    </form>
-    <hr/>
+<h1> Основные параметры корабля <br> Иперского флота</h1>
+<form action="#" th:action="@{/ship/save/main}" method="post">
+    <table border="1">
+        <tr align="left"><th>Name</th><td><input type="text" name="name"> </td></tr>
+        <tr align="left"><th>Localized_name</th><td><input type="text" name="localized_name"> </td></tr>
+        <tr align="left"><th>Manufacturer</th><td><input type="text" name="manufacturer"> </td></tr>
+        <tr align="left"><th>Autonomy</th><td><input type="text" name="autonomy"> </td></tr>
+        <tr align="left"><th>Cargo_capacity</th><td><input type="text" name="cargo_capacity"> </td></tr>
+        <tr align="left"><th>Description</th><td><input type="text" name="description"> </td></tr>
+        <tr align="left"><th>Link</th><td><input type="text" name="link"> </td></tr>
+        <tr align="left"><th>Cost</th><td><input type="text" name="cost"> </td></tr>
+    </table>
+    <input type="submit" value="Далее"/> <input type="reset" value="Haчaть заново"/>
+</form>
+<footer>
+    <p><a href=mailto:eglinkon@gmail.com>Флот Империи Айур</a></p><br/>
     <a th:href="@{/}"><button class="on_page_action">На главную страницу</button></a>
-</div>
-
+</footer>
 </body>
