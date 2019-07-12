@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="utf-8" />
+<head th:include="fragments/layout :: headerFragment">
+    <title id="pageTitle">Корабли</title>
+</head>
+<body>
+<h1>Корабли</h1>
+<h2>Добавление модели корабля</h2>
+<div class="main-content">
+    <hr/>
+    <form action="#" th:action="@{/ship/save/sensor}" method="post">
+        <input type="hidden" name="ship_id" th:text="${shipId}" th:value="${shipId}">
+        <label for="passive_mode">Пассивный режим</label>
+        <input type="text" name="passive_mode" id="passive_mode"><br/>
+        <label for="scanning">Сканирование</label>
+        <input type="text" name="scanning" id="scanning"><br/>
+        <label for="searching">Поиск</label>
+        <input type="text" name="searching" id="searching"><br/>
+        <label for="focus">Фокус</label>
+        <input type="text" name="focus" id="focus"><br/>
+        <input type="submit" value="Просмотреть результат"/>
+    </form>
+    <hr/>
+    <a th:href="@{/}"><button class="on_page_action">На главную страницу</button></a>
+</div>
+
+</body>

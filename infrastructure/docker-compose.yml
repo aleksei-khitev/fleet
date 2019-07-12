@@ -1,0 +1,22 @@
+# ==============
+# open via http://localhost:9091/
+# --------------
+# The script uses these environment variables.
+# Set them before use
+# Here are examples:
+# RP_FLEET_DB_PATH="/home/db/"
+# ==============
+version: '2'
+services:
+  fleet:
+    image: jboss/wildfly
+    network_mode: host
+    volumes:
+      - $RP_FLEET_DB_PATH:/u01/fleet/db/
+      - $RP_FLEET_PATH_TO_WAR/fleet-0.1.1.war:/opt/jboss/wildfly/standalone/deployments/fleet.war
+      - $RP_FLEET_LOGS_DIR:/u01/fleet/log/
+    command: /opt/jboss/wildfly/bin/standalone.sh --debug 8787 -b 0.0.0.0 -bmanagement 0.0.0.0
+    container_name: fleet
+    ports:
+      - "8080:8080"
+      - "8787:8787"

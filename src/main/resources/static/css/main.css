@@ -1,0 +1,13 @@
+body {
+    background-color: #B0C4DE;
+    margin: 0 15%;
+    font-family: sans-serif;
+}
+hi {
+    text-align: center;
+    font-family: serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    border-bottom: lpx solid #57bldc;
+    margin-top: 30px;
+}

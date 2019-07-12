@@ -1,0 +1,29 @@
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="utf-8" />
+<head th:include="fragments/layout :: headerFragment">
+    <title id="pageTitle">Корабли</title>
+</head>
+<body>
+<div class="main-content">
+    <h1>Корабли</h1>
+    <h2>Список моделей кораблей</h2>
+    <hr/>
+    <table border="1">
+        <tr align="left">
+            <th class="table_header">Название (ru)</th>
+            <th class="table_header">Название (en)</th>
+        </tr>
+        <tr align="left" th:each="ship : ${ships}" >
+            <td><a th:href="@{'~/fleet/ship/view/' + ${ship.id}}"><span th:text="${ship.localizedName}"></span></a></td>
+            <td class="table_cell_info"><span th:text="${ship.name}"></span></td>
+        </tr>
+    </table>
+    <a th:href="@{/ship/add/main}"><button>Добавить</button></a>
+    <hr/>
+    <a th:href="@{/}"><button>На главную страницу</button></a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="utf-8" />
+<head th:include="fragments/layout :: headerFragment">
+    <title id="pageTitle">Корабли</title>
+</head>
+<body>
+<h1>Корабли</h1>
+<h2>Добавление модели корабля</h2>
+<div class="main-content">
+    <hr/>
+    <form action="#" th:action="@{/ship/save/main}" method="post">
+        <label for="name">Название модели (en)</label>
+        <input type="text" name="name" id="name"><br/>
+        <label for="name">Название модели (ру)</label>
+        <input type="text" name="localized_name" id="localized_name"><br/>
+        <label for="manufacturer">Производитель</label>
+        <input type="text" name="manufacturer" id="manufacturer"><br/>
+        <label for="autonomy">Автономность (в днях)</label>
+        <input type="text" name="autonomy" id="autonomy"><br/>
+        <label for="cargo_capacity">Грузоподъемность</label>
+        <input type="text" name="cargo_capacity" id="cargo_capacity"><br/>
+        <label for="description">Описание</label>
+        <input type="text" name="description" id="description"><br/>
+        <label for="cost">Стоимость</label>
+        <input type="text" name="cost" id="cost"><br/>
+        <label for="link">Ссылка</label>
+        <input type="text" name="link" id="link"><br/>
+        <input type="submit" value="Перейти к размерам"/>
+    </form>
+    <hr/>
+    <a th:href="@{/}"><button class="on_page_action">На главную страницу</button></a>
+</div>
+
+</body>

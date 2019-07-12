@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="utf-8" />
+<head th:include="fragments/layout :: headerFragment">
+    <title id="pageTitle">Корабли</title>
+</head>
+<body>
+<h1>Корабли</h1>
+<h2>Добавление модели корабля</h2>
+<div class="main-content">
+    <hr/>
+    <form action="#" th:action="@{/ship/save/size}" method="post">
+        <input type="hidden" name="ship_id" th:text="${shipId}" th:value="${shipId}">
+        <label for="length">Длина (в метрах)</label>
+        <input type="text" name="length" id="length"><br/>
+        <label for="height">Высота (в метрах)</label>
+        <input type="text" name="height" id="height"><br/>
+        <label for="width">Ширина (в метрах)</label>
+        <input type="text" name="width" id="width"><br/>
+        <input type="submit" value="Перейти к экипажу"/>
+    </form>
+    <hr/>
+    <a th:href="@{/}"><button class="on_page_action">На главную страницу</button></a>
+</div>
+
+</body>

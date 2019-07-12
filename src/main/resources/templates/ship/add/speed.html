@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="utf-8" />
+<head th:include="fragments/layout :: headerFragment">
+    <title id="pageTitle">Корабли</title>
+</head>
+<body>
+<h1>Корабли</h1>
+<h2>Добавление модели корабля</h2>
+<div class="main-content">
+    <hr/>
+    <form action="#" th:action="@{/ship/save/speed}" method="post">
+        <input type="hidden" name="ship_id" th:text="${shipId}" th:value="${shipId}">
+        <label for="cruising_speed">Крейсерская скорость (MGLT)</label>
+        <input type="text" name="cruising_speed" id="cruising_speed"><br/>
+        <label for="maximum_speed">Максимальная скорость (MGLT)</label>
+        <input type="text" name="maximum_speed" id="maximum_speed"><br/>
+        <label for="hyper_drive">Гиппер двигатель</label>
+        <input type="text" name="hyper_drive" id="hyper_drive"><br/>
+        <label for="hyper_drive_backup">Резервный гиппер двигатель</label>
+        <input type="text" name="hyper_drive_backup" id="hyper_drive_backup"><br/>
+        <input type="submit" value="Перейти к защите"/>
+    </form>
+    <hr/>
+    <a th:href="@{/}"><button class="on_page_action">На главную страницу</button></a>
+</div>
+
+</body>
