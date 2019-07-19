@@ -1,25 +1,8 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <meta charset="utf-8" />
-<head>
-    <title id="pageTitle">Корабли</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <style>
-        body {
-            text-align: center;
-            background-color: #B0C4DE;
-            margin: 0 15%;
-            font-family: sans-serif;
-        }
-        h1 {
-            font-family: Georgia;
-            font-weight: normal;
-            text-transform: uppercase;
-            border-bottom: lpx solid #57bldc;
-            margin-top: 30px;
-        }
-        footer {text-align: left; !important}
-    </style>
+<head th:include="fragments/layout :: headerFragment">
+    <title id="pageTitle">maininfo</title>
 </head>
 <body>
 <h1> Основные параметры корабля <br> Иперского флота</h1>

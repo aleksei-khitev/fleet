@@ -1,0 +1,61 @@
+body {
+    background-color: #2F4F4F;
+    margin: 0 10%;
+    background-image: url(../img/fon2.jpg);
+    background-position: right;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+}
+img
+{
+    opacity: 0.1; /*(Range = 0.0 to 1.0)*/
+    filter: alpha(opacity = 100); /* (Range = 0% to 100%) For IE8 & ealier */
+}
+h1 {
+    font-family: Georgia;
+    font-size: 40px;
+    color: #000080;
+    text-transform: uppercase;
+    text-shadow: .1em -.1em .15em blueviolet;
+}
+h2 {
+    font-family: Courier;
+    font-size: 20px;
+    text-decoration: underline;
+    color: #228B22;
+    
+}
+h3 {
+    font-family: Arial;
+    font-size: 20px;
+    font-style: italic;
+    color: #000080;
+}
+section {
+    font-family: Verdana; color: #1E90FF;
+}
+th {
+    font-family: Courier;
+    font-size: small-caps;
+    color: #00FFFF;
+    letter-spacing: 2px;
+}
+td {
+    font-family: Courier;
+    font-size: small-caps;
+    color: #00FFFF;
+}
+ul {
+    list-style-image: url('../img/fon.jpg');
+    list-style-type: circle;
+    list-style-position: outside;
+            vertical-align: middle;}
+   .toolbar ul li
+        {
+            display: table-cell;
+            height: 100px;
+            list-style-type: none;
+            margin: 10px;
+            vertical-align: middle;
+        }
+}
