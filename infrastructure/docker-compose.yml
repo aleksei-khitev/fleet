@@ -1,5 +1,5 @@
 # ==============
-# open via http://localhost:9091/
+# open via http://localhost:8080/fleet/api/...
 # --------------
 # The script uses these environment variables.
 # Set them before use

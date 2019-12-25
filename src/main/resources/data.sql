@@ -1,0 +1,2 @@
+INSERT INTO ship(id, name, class_name, speed, crew) VALUES (0,'Victory Star Destroyer', 'Battle Cruiser', 60, 6107);
+INSERT INTO ship(id, name, class_name, speed, crew) VALUES (1,'Acclamator II Cruiser', 'Cruiser', 40, 2014);
